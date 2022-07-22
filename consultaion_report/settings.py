@@ -25,7 +25,7 @@ SECRET_KEY = '3gvf0zakt+q-5x57_jjk6ldix%cld=2*9&pb4x0c2ggxmjwr5z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['msdocs-python-postgres-webapp-jal.azurewebsites.net']
+ALLOWED_HOSTS = ['msdocs-python-postgres-webapp-jal.azurewebsites.net','127.0.0.1']
 
 
 # Application definition
@@ -121,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
