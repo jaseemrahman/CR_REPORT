@@ -25,7 +25,7 @@ SECRET_KEY = '3gvf0zakt+q-5x57_jjk6ldix%cld=2*9&pb4x0c2ggxmjwr5z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['msdocs-python-postgres-webapp-jal.azurewebsites.net']
 
 
 # Application definition
