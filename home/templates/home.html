@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<title>CONSULTATION REPORT</title>
+    </head>
+    <body>
+        <div class="my-4  container">
+        <h1 style="border-bottom:2px solid orangered;color:teal;padding-bottom:5px;" class="text-center"><b>CONSULTATION REPORT</b><h1>
+            <form class = 'card p-1 bg-light' action="{% url 'download' %}" method="post">
+              {{form.media}} 
+              {% csrf_token %}      
+                <div style="color: teal;font-weight: 500;font-size:30">    
+               <div class="row">
+                    <div class="col">
+                            <label>Clinic Name</label>
+                            <input type="text" class="form-control" placeholder="{{clinic_name}}" name='clinic_name'>
+                          </div>
+                          <br>
+                          <div class="col">
+                            <label>Clinic Logo</label>
+                            <input type="text" class="form-control" placeholder="{{clinic_logo}}" name='clinic_logo'>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                              <label>Physician Name</label>
+                              <input type="text" class="form-control" placeholder="{{physician_name}}" name='physician_name'>
+                            </div>
+                            <br>
+                            <div class="col">
+                              <label>Physician Contact</label>
+                              <input type="tel" id="phone" class="form-control" placeholder="{{physician_contact}}" name='physician_contact'>
+                            </div> 
+                            <br>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <label>Patient First Name</label>
+                              <input type="text" class="form-control" placeholder="{{pt_first_name}}" name='pt_first_name'>
+                            </div>
+                            <br>
+                            <div class="col">
+                              <label>Patient Last Name</label>
+                              <input type="text" class="form-control" placeholder="{{pt_last_name}}" name='pt_last_name'>
+                            </div>
+                            <br>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <label>Patient Dob</label>
+                              <input type="date" class="form-control" placeholder="{{pt_dob}}" name='pt_dob'>
+                            </div>
+                            <br>
+                           <div class="col">
+                              <label>Patient Contact</label>
+                              <input type="tel" id="phone" class="form-control" placeholder="{{pt_contact}}" name='pt_contact'>
+                            </div>
+                          </div> 
+        <div class="form-group">
+                  <label for="text">Chief Complaint</label>
+                  <p>{{form.chief_complaint|safe}}</p>
+                </div>
+                <div class="form-group">
+                  <label for="text">Consultation Note</label>
+                  <p>{{form.consultation_note|safe}}</p>
+                </div>
+                          </div>
+                <button type="submit" class="btn btn-primary">Generate Report</button>
+            </form>
+        </div>
+    </body>
+    </html>
