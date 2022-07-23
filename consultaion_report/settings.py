@@ -101,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CSRF_TRUSTED_ORIGINS = ["equipo-demo.azurewebsites.net"]
+CSRF_TRUSTED_ORIGINS = ["https://equipo-demo.azurewebsites.net"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
