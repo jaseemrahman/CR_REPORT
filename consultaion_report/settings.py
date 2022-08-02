@@ -25,7 +25,7 @@ SECRET_KEY = '3gvf0zakt+q-5x57_jjk6ldix%cld=2*9&pb4x0c2ggxmjwr5z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['equipo-demo.azurewebsites.net','127.0.0.1','equipo123.azurewebsites.net']
 
 
 # Application definition
@@ -101,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = ["https://equipo-demo.azurewebsites.net","https://equipo123.azurewebsites.net"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -119,4 +120,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = 'static/'
+
